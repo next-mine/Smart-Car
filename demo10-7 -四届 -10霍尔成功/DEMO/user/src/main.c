@@ -176,7 +176,8 @@ int main(void)
 				tft180_show_int(112, 112, line_lost_flag, 1);				// LOST = 丢线标志
 				tft180_show_int(144, 112, speed_fault, 1);					// F    = 速度环故障标志
 				tft180_show_int(0, 0, hall_num, 3);						// H    = 霍尔原始电平(0/1)
-				tft180_show_int(48, 0, round_true_in_flag, 3);	
+				tft180_show_int(48, 0, hall_flag, 3);
+				tft180_show_int(96, 0, round_true_in_flag, 3);	
     }
 }
 

@@ -10547,7 +10547,7 @@ Removing Unused input sections from the image.
     Removing servo_control.o(.text), (0 bytes).
     Removing servo_control.o(.ARM.exidx.text.set_servo_pwm), (8 bytes).
     Removing speed_control.o(.text), (0 bytes).
-    Removing speed_control.o(.text.speed_loop_reset), (100 bytes).
+    Removing speed_control.o(.text.speed_loop_reset), (98 bytes).
     Removing speed_control.o(.ARM.exidx.text.speed_loop_reset), (8 bytes).
     Removing speed_control.o(.ARM.exidx.text.set_speed_pwm), (8 bytes).
     Removing speed_control.o(.ARM.exidx.text.speed_curve_plan), (8 bytes).
@@ -16215,7 +16215,7 @@ Removing Unused input sections from the image.
     Removing d2f.o(.text), (56 bytes).
     Removing fepilogue.o(.text), (110 bytes).
 
-5709 unused section(s) (total 636963 bytes) removed from the image.
+5709 unused section(s) (total 636961 bytes) removed from the image.
 
 ==============================================================================
 
@@ -19027,11 +19027,11 @@ Image component sizes
        562          0        599          0         40      36611   fsl_sai.o
        124          0          0          0         16      21543   fsl_spdif.o
         80          0         12          4         12      33691   fsl_usdhc.o
-      1308          4          8          0         59       4310   get_data.o
+      1308          4          8          0         59       4340   get_data.o
        886          0          0          0          0       5829   isr.o
-      1112          0         56          0          0       7594   main.o
-       380         28          0         12          4       1700   servo_control.o
-      1144         48          0         21         13       3479   speed_control.o
+      1112          0         56          0          0       7624   main.o
+       380         28          0         12          4       1730   servo_control.o
+      1144         48          0         21         13       3508   speed_control.o
        564        260       1024          0          0       2403   startup_mimxrt1064.o
        422          0          0          4          0       5949   system_mimxrt1064.o
        530          0          0          0          0      13066   usb_device_dci.o
@@ -19058,7 +19058,7 @@ Image component sizes
         36          0          0          0         16      17860   zf_driver_usb_cdc.o
 
     ----------------------------------------------------------------------
-     56434        840      11172        244      11192     660775   Object Totals
+     56434        840      11172        244      11192     660894   Object Totals
          0          0         48          0      10240          0   (incl. Generated)
       1174          8         15          7         16          0   (incl. Padding)
 
@@ -19127,8 +19127,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     63240       1264      11316        248      11192     661691   Grand Totals
-     63240       1264      11316        248      11192     661691   ELF Image Totals
+     63240       1264      11316        248      11192     661810   Grand Totals
+     63240       1264      11316        248      11192     661810   ELF Image Totals
      63240       1264      11316        248          0          0   ROM Totals
 
 ==============================================================================

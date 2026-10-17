@@ -189,9 +189,9 @@ static float adc_diff_sum(void)
     // 改成"按记忆方向打死角"，就能在信号变弱的瞬间保持弯道打角，把车头拽回弯道内侧。
     static float last_error = 0.0f;
 
-    left  = 1.3*(int32)adc_normal[0] + (int32)adc_normal[1];        // 左侧两路电感之和
-    right = (int32)adc_normal[2] + 1.3*(int32)adc_normal[3];        // 右侧两路电感之和
-    total = 1.3* (int32)adc_normal[0] + (int32)adc_normal[1] + (int32)adc_normal[2] + 1.3*(int32)adc_normal[3]; 
+    left  = 1.05*(int32)adc_normal[0] + (int32)adc_normal[1];        // 左侧两路电感之和
+    right = (int32)adc_normal[2] + 1.05*(int32)adc_normal[3];        // 右侧两路电感之和
+    total = 1.05* (int32)adc_normal[0] + (int32)adc_normal[1] + (int32)adc_normal[2] + 1.05*(int32)adc_normal[3]; 
 
     // 丢线停车判定：total 低于 LINE_LOST_MOTOR 才置位，阈值比舵机丢线阈值更严，避免信号稍弱就把车刹死。
     if (total < LINE_LOST_MOTOR)
