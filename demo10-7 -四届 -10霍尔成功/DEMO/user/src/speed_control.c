@@ -2,6 +2,7 @@
 #include "my_common.h"
 #include "speed_control.h"
 #include "get_data.h"
+#include <math.h>
 
 //控制电机速度，可取0-100，若太大可调低，若使用3S电池，占空比应限幅60%
 // 这里保留 int8 类型和 duty 这个变量名，是为了和屏幕显示、以及原来那份开环代码的习惯保持一致。
@@ -63,7 +64,7 @@ static void speed_curve_plan(void)
     if (abs_error < 0.0f) abs_error = -abs_error;                 // 手写绝对值，避免 func_abs 对 float 截断
 
     // ---- (1) 连续降速 ----
-    desired = SPEED_CURVE_MAX - SPEED_CURVE_GAIN1 * abs_error;
+    desired = SPEED_CURVE_MAX - exp(SPEED_CURVE_GAIN2*abs_error);//将函数改为减去指数函数，非线性变化
 
     // ---- (2) 入弯提前减速 ----
     rate = abs_error - last_abs_error;                            // 偏差在增大 = 正在入弯
