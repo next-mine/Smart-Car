@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\rt1064.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\rt1064.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6240002: Last Updated: Wed Oct 21 13:13:03 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6240002: Last Updated: Wed Oct 21 16:20:06 2026
 <BR><P>
 <H3>Maximum Stack Usage =       1184 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1713,11 +1713,11 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 648<LI>Call Chain = GPT_Init &rArr; CLOCK_EnableClock &rArr; CLOCK_ControlGate &rArr; __aeabi_assert &rArr; DbgConsole_Printf &rArr; DbgConsole_Vprintf &rArr; DbgConsole_PrintfFormattedData &rArr; DbgConsole_ConvertFloatRadixNumToString &rArr; __hardfp_pow &rArr; sqrt
 </UL>
 <BR>[Calls]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
-<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPT_SetClockSource
-<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPT_SoftwareReset
 <LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_EnableClock
 <LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPT_GetInstance
 <LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPT_SetClockDivider
+<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPT_SetClockSource
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPT_SoftwareReset
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_delay_init
 </UL>
@@ -2689,7 +2689,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clock_init
 </UL>
 
-<P><STRONG><a name="[a9]"></a>main</STRONG> (Thumb, 794 bytes, Stack size 120 bytes, main.o(.text.main))
+<P><STRONG><a name="[a9]"></a>main</STRONG> (Thumb, 814 bytes, Stack size 120 bytes, main.o(.text.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 1184<LI>Call Chain = main &rArr; tft180_show_float &rArr; tft180_show_string &rArr; tft180_show_char &rArr; tft180_set_region &rArr; tft180_write_index &rArr; spi_write_8bit &rArr; spi_write_8bit_array &rArr; spi_write &rArr; LPSPI_MasterTransferBlocking &rArr; LPSPI_CheckTransferArgument &rArr; __aeabi_assert &rArr; DbgConsole_Printf &rArr; DbgConsole_Vprintf &rArr; DbgConsole_PrintfFormattedData &rArr; DbgConsole_ConvertFloatRadixNumToString &rArr; __hardfp_pow &rArr; sqrt
 </UL>
 <BR>[Calls]<UL><LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tft180_show_float
@@ -2781,7 +2781,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encoder_quad_init
 </UL>
 
-<P><STRONG><a name="[201]"></a>set_servo_pwm</STRONG> (Thumb, 696 bytes, Stack size 48 bytes, servo_control.o(.text.set_servo_pwm))
+<P><STRONG><a name="[201]"></a>set_servo_pwm</STRONG> (Thumb, 888 bytes, Stack size 48 bytes, servo_control.o(.text.set_servo_pwm))
 <BR><BR>[Stack]<UL><LI>Max Depth = 712<LI>Call Chain = set_servo_pwm &rArr; pwm_set_duty &rArr;  debug_assert_handler (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_set_duty

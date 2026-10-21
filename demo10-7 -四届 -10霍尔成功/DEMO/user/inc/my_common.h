@@ -247,8 +247,8 @@
 #define adc_round_inner_true_in						 (9)		//内测两个电感会稍微变大，之后回落至个位数
 
 
-#define Kp1                                (0.005)
-#define Kp2                                (0.0065)
+#define Kp1                                (0.0055)
+#define Kp2                                (0.008)
 
 
 #endif

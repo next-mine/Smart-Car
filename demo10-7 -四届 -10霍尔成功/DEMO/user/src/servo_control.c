@@ -26,7 +26,8 @@ uint8 round_true_in_count=0;
 uint8 round_pre_in_flag=0;																			//置为1则进入环岛，强制打角
 uint8 round_true_in_flag=0;
 uint8 round_already_in_flag=0;
-
+uint8 round_pre_out_flag=0;
+uint8 round_true_out_flag=0;
 //-------------------------------------------------------------------------------------------------------------------
 // 函数简介     设置舵机PWM
 // 参数说明     无
@@ -73,6 +74,20 @@ void set_servo_pwm(void)
 	{
 		kp=Kp2;
 	}
+	if(round_already_in_flag==1 && adc_normal[1]+adc_normal[2]>=80)
+	{
+		round_pre_out_flag=1;
+	}
+	if(round_already_in_flag==1 && adc_normal[1]+adc_normal[2]<=20)
+	{
+		round_true_out_flag=1;
+	}
+	if(round_true_out_flag==1)
+	{
+		kp=Kp1;
+	}
+	
+
 	
 	float error_rate;
 
@@ -91,9 +106,12 @@ void set_servo_pwm(void)
 	//正式进环后要进行的操作
 	if(round_true_in_flag==1&&round_already_in_flag==0)
 	{
-		servo_motor_angle = 100;
+		servo_motor_angle = 105;
 	}
-
+	if(round_pre_out_flag==1 && round_true_out_flag==0)
+	{
+		servo_motor_angle = 105;
+	}
 	
 	//设置舵机打角。三路舵机写的是同一个值，只是为了适配"舵机到底插在哪个引脚"不确定的情况，
 	// 实际接线只会用到其中一路，另外两路可以删掉（留着也不会有什么坏处）。

@@ -178,6 +178,7 @@ int main(void)
 				tft180_show_int(0, 0, hall_num, 3);						// H    = 霍尔原始电平(0/1)
 				tft180_show_int(48, 0, hall_flag, 3);
 				tft180_show_int(96, 0, round_true_in_flag, 3);	
+				tft180_show_int(128, 0, round_pre_out_flag, 3);	
     }
 }
 

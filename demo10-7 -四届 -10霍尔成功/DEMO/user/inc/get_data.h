@@ -13,7 +13,9 @@ extern int16  encoder_data_2;
 extern int16  encoder_data_3;
 extern int16  encoder_data_4;
 extern int32  hall_num;
-extern uint8   round_true_in_flag;
+extern uint8  round_true_in_flag;
+extern uint8  round_pre_out_flag;
+
 
 
 extern uint16 adc_buffer[ADC_CHANNEL_NUMBER];           // 电感原始值（已滤波，未归一化，0~4095）
